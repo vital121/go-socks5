@@ -16,6 +16,7 @@ type DNSResolver struct{}
 
 func (d DNSResolver) Resolve(ctx context.Context, name string) (context.Context, net.IP, error) {
 	addr, err := net.ResolveIPAddr("ip", name)
+	log.Printf("Resolve name %s\n", name)
 	log.Printf("Resolve addr %s\n", addr)
 	log.Printf("Resolve net.IP %s\n", net.IP)
 	if err != nil {
