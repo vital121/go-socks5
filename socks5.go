@@ -82,7 +82,7 @@ func New(conf *Config) (*Server, error) {
 	if conf.Logger == nil {
 		conf.Logger = log.New(os.Stdout, "", log.LstdFlags)
 	}
-
+	log.Printf("Start logging")
 	server := &Server{
 		config: conf,
 	}
